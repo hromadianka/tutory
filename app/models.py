@@ -34,6 +34,7 @@ class AddProject(models.Model):
         return str(self.id)
 
 class Result(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     username = models.CharField(max_length=100, unique=False)
     project_id = models.ForeignKey(Project, on_delete = models.SET_NULL, null=True)
     name = models.CharField(max_length=100, default='')
@@ -44,6 +45,7 @@ class Result(models.Model):
         return str(self.username)
 
 class Feedback(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     business_username = models.CharField(max_length=100)
     student_username = models.CharField(max_length=100)
     result = models.ForeignKey(Result, on_delete = models.SET_NULL, name="result", null=True)
