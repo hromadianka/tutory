@@ -35,7 +35,7 @@ class AddProject(models.Model):
 
 class Result(models.Model):
     username = models.CharField(max_length=100, unique=False)
-    project_id = models.ForeignKey(Project, on_delete = models.SET_NULL, default=uuid.uuid4, null=True)
+    project_id = models.ForeignKey(Project, on_delete = models.SET_NULL, null=True)
     name = models.CharField(max_length=100, default='')
     text = models.TextField(default='')
     files = models.FileField (upload_to='results')
@@ -46,7 +46,7 @@ class Result(models.Model):
 class Feedback(models.Model):
     business_username = models.CharField(max_length=100)
     student_username = models.CharField(max_length=100)
-    result = models.ForeignKey(Result, on_delete = models.SET_NULL, default=uuid.uuid4, name="result", null=True)
+    result = models.ForeignKey(Result, on_delete = models.SET_NULL, name="result", null=True)
     text = models.TextField(default='')
 
     def __str__(self):
