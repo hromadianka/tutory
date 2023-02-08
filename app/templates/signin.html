@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+{% load static %}
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Tutory</title>
+    <link href="{% static "style.css" %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <a href="/" style="margin-bottom: 0"><img id="logo" src="{% static "img/logo.png" %}" /></a>
+        <ul id="menuul">
+            <li id="menuli"><a href="/#about">Про нас</a></li>
+            <li id="menuli"><a href="/#student">Я - студент</a></li>
+            <li id="menuli"><a href="/#business">Я - підприємець</a></li>
+        </ul>
+    </header><div><style>
+            @media (min-width: 650px) {
+                h5 {
+                    margin-left: 12em;
+                }
+            }
+
+            h5 {
+                margin-top: 2em
+            }
+        </style>{% for message in messages %}<h5>{{message}}</h5>{% endfor %}</div><h1>Вхід</h1><form action="" method="post">{% csrf_token %}<input style="margin-bottom: 0.7em" type="text" name="username" placeholder="Логін" /><input style="margin-bottom: 0.7em" type="password" name="password" placeholder="Пароль" /><button type="submit">Увійти</button></form><p><a href="/signup" style="text-decoration: underline; text-decoration-color: #808080">Я хочу створити новий акаунт</a></p><a href="accounts/password_reset" id="link" style="text-decoration: underline; text-decoration-color: #808080">Забули пароль?</a>
+</body>
+</html>
