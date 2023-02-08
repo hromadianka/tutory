@@ -1,1 +1,1 @@
-"web: gunicorn TUTORYPROJECT.wsgi" 
+web: gunicorn TUTORYPROJECT.wsgi
