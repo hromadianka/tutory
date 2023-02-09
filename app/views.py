@@ -144,7 +144,7 @@ def create(request):
         description = request.POST['description']
         category = request.POST['category']
 
-        project = Project.objects.create(name=name, description=description, category=category, user=user)
+        project = Project.objects.create(name=name, description=description, category=category, user=user.name)
         project.save()
 
         return redirect('project', pk=project.id)
