@@ -121,7 +121,7 @@ def setting(request):
         
         user_profile.description  = request.POST['description']
 
-        user_object.username = request.POST['username1']
+
 
         if request.POST['password_new'] != '':
             if request.POST['password_new'] != user_object.password:
