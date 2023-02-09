@@ -273,3 +273,6 @@ def deleteaccount(request, pk):
         user_profile.delete()
         return redirect('/')
     return render(request, 'deleteaccount.html')
+
+def courses(request):
+      return render(request, 'courses.html')
