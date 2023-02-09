@@ -12,6 +12,7 @@ class Profile(models.Model):
     id_user = models.IntegerField()
     email = models.EmailField()
     description = models.TextField(default='')
+    name = models.TextField(default='')
 
     def __str__(self):
         return self.user.username
