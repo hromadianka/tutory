@@ -179,7 +179,7 @@ def project(request, pk):
     else:
         button_text = 'Більше не беру участь'
 
-    my_solutions = Result.objects.filter(username=username, project_id=project.id)
+    my_solutions = Result.objects.filter(username=request.user.username, project_id=project.id)
 
     creator = Project.objects.filter(id=pk, user=user_profile.name)
     results = Result.objects.filter(project_id=project.id)
