@@ -24,7 +24,7 @@ def index(request):
           Projects = None
       
       try:
-          user_projects = Project.objects.filter(user=request.user.username)
+          user_projects = Project.objects.filter(user_profile.name)
       except:
           user_projects = None
 
@@ -170,7 +170,8 @@ def add(request):
 
 def project(request, pk):
     project = Project.objects.get(id=pk)
-    username = request.user.username
+    user_object = User.objects.get(username=request.user.username)
+    user_profile = Profile.objects.get(user=user_object)
 
     add_filter = AddProject.objects.filter(project_id=project.id, username=username).first()
     if add_filter == None:
@@ -180,7 +181,7 @@ def project(request, pk):
 
     my_solutions = Result.objects.filter(username=username, project_id=project.id)
 
-    creator = Project.objects.filter(id=pk, user=username)
+    creator = Project.objects.filter(id=pk, user=user_profile.name)
     results = Result.objects.filter(project_id=project.id)
     
     feedback = None
