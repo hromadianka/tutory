@@ -173,7 +173,7 @@ def project(request, pk):
     user_object = User.objects.get(username=request.user.username)
     user_profile = Profile.objects.get(user=user_object)
 
-    add_filter = AddProject.objects.filter(project_id=project.id, username=username).first()
+    add_filter = AddProject.objects.filter(project_id=project.id, username=request.user.username).first()
     if add_filter == None:
         button_text = 'Додати проєкт собі'
     else:
