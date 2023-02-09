@@ -138,7 +138,7 @@ def setting(request):
 @login_required(login_url='/signin')
 def create(request):
     if request.method == 'POST':
-        user = request.user.username
+        user = Profile.objects.get(user=request.user.username)
 
         name = request.POST['name']
         description = request.POST['description']
