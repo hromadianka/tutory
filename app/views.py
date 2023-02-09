@@ -24,7 +24,7 @@ def index(request):
           Projects = None
       
       try:
-          user_projects = Project.objects.filter(user_profile.name)
+          user_projects = Project.objects.filter(user=user_profile.name)
       except:
           user_projects = None
 
