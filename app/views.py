@@ -34,6 +34,7 @@ def signup(request):
 
     if request.method == 'POST':
         username = request.POST['username']
+        name = request.POST['name']
         email = request.POST['email']
         password = request.POST['password']
         password2 = request.POST['password2']
@@ -55,7 +56,7 @@ def signup(request):
 
                 #create a Profile object for the new user
                 user_model = User.objects.get(username=username)
-                new_profile = Profile.objects.create(user=user_model, id_user=user_model.id, email=user.email)
+                new_profile = Profile.objects.create(user=user_model, id_user=user_model.id, email=user.email, name=name)
                 new_profile.save()
                 return redirect('/')
         else:
@@ -120,7 +121,7 @@ def setting(request):
         user_object.email = request.POST['email1']
         
         user_profile.description  = request.POST['description']
-
+        user_profile.name  = request.POST['name']
 
 
         if request.POST['password_new'] != '':
