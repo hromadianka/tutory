@@ -39,6 +39,7 @@ urlpatterns = [
     path('project/<str:pk>/delete', views.delete),
     path('search', views.search),
     path('courses', views.courses),
+    path('allprojects', views.allprojects),
 ]
 
 urlpatterns = urlpatterns+static(settings.MEDIA_URL,
