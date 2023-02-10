@@ -8,13 +8,6 @@
     <link href="{% static "style.css" %}" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <header>
-        <a href="/" style="margin-bottom: 0"><img id="logo" src="{% static "img/logo.png" %}" /></a>
-        <ul id="menuul">
-            <li id="menuli"><a href="/#about">Про нас</a></li>
-            <li id="menuli"><a href="/#student">Я - студент</a></li>
-            <li id="menuli"><a href="/#business">Я - підприємець</a></li>
-        </ul>
-    </header><p>Ви впевнені, що хочете видалити свій акаунт?</p><form action="/settings"><button>Ні, повернутись</button></form><form method="POST">{% csrf_token %}<button style="margin-top: 1em; background-color: #ffffff; border: 1px solid black">Я впевнений</button></form>
+    <header><a href="/" style="margin-bottom: 0"><img id="logo" src="{% static "img/logo.png" %}" /></a><ul id="menuul"><li id="menuli"><a href="/#about">Про нас</a></li><li id="menuli"><a href="/#student">Я - студент</a></li><li id="menuli"><a href="/#business">Я - підприємець</a></li></ul></header><p>Ви впевнені, що хочете видалити свій акаунт?</p><form action="/settings"><button>Ні, повернутись</button></form><form method="POST">{% csrf_token %}<button style="margin-top: 1em; background-color: #ffffff; border: 1px solid black">Я впевнений</button></form>
 </body>
 </html>
