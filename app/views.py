@@ -278,3 +278,7 @@ def deleteaccount(request, pk):
 
 def courses(request):
       return render(request, 'courses.html')
+
+def allprojects(request):
+      Projects = Project.objects.all()
+      return render(request, 'allcourses.html', {'Projects': Projects,})
