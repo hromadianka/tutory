@@ -281,4 +281,4 @@ def courses(request):
 
 def allprojects(request):
       Projects = Project.objects.all()
-      return render(request, 'allcourses.html', {'Projects': Projects,})
+      return render(request, 'allprojects.html', {'Projects': Projects,})
