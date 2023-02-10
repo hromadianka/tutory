@@ -8,13 +8,6 @@
     <link href="{% static "style.css" %}" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <header>
-        <a href="/" style="margin-bottom: 0"><img id="logo" src="{% static "img/logo.png" %}" /></a>
-        <ul id="menuul">
-            <li id="menuli"><a href="/#about">Про нас</a></li>
-            <li id="menuli"><a href="/#student">Я - студент</a></li>
-            <li id="menuli"><a href="/#business">Я - підприємець</a></li>
-        </ul>
-    </header><h1>Завантажити результат</h1><form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}<input name="name" type="text" placeholder="Назови свіє рішення" style="margin-bottom: 0.7em" /><br /><textarea name="text" type="text" placeholder="Опиши своє рішення" style="margin-bottom: 0.7em"></textarea><br /><input name="files" type="file" placeholder="Прикрепи файл" /><button>Завантажити результат✨</button></form>
+    <header><a href="/" style="margin-bottom: 0"><img id="logo" src="{% static "img/logo.png" %}" /></a><ul id="menuul"><li id="menuli"><a href="/#about">Про нас</a></li><li id="menuli"><a href="/#student">Я - студент</a></li><li id="menuli"><a href="/#business">Я - підприємець</a></li></ul></header><h1>Завантажити результат</h1><form action="" method="POST" enctype="multipart/form-data">{% csrf_token %}<input name="name" type="text" placeholder="Назови свіє рішення" style="margin-bottom: 0.7em" /><br /><textarea name="text" type="text" placeholder="Опиши своє рішення" style="margin-bottom: 0.7em"></textarea><br /><input name="files" type="file" placeholder="Прикрепи файл" /><button>Завантажити результат✨</button></form>
 </body>
 </html>
