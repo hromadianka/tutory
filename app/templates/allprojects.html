@@ -15,5 +15,5 @@
             <li id="menuli"><a href="/#student">Я - студент</a></li>
             <li id="menuli"><a href="/#business">Я - підприємець</a></li>
         </ul>
-  </header><h1>Всі проєкти</h1>{% for project in Projects %}<div class="card project"><p id="cardname"><a href="/project/{{project.id}}">{{project.name}}</a></p><div id="company"><p id="cardcompany">{{project.user}}</p></div><p id="carddescription">{{project.description|wordwrap:20|truncatechars:23}}</p></div>{% endfor %}
+  </header><h1>Всі проєкти</h1>{% for project in Projects reversed %}<div class="card project"><p id="cardname"><a href="/project/{{project.id}}">{{project.name}}</a></p><div id="company"><p id="cardcompany">{{project.user}}</p></div><p id="carddescription">{{project.description|wordwrap:20|truncatechars:23}}</p></div>{% endfor %}
   </body></html>
