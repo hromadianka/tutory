@@ -151,15 +151,9 @@ h3 {
     }
      
     #menuli {
-        padding-top: 0;
-        margin-top: -1em;
-        padding-bottom: 0;
-        margin-bottom: -1em;
     }
 
     #logo {
-        margin-bottom: -3em;
-        margin-top: -5em;
         margin-left: 0;
         padding-left: 0;
     }
@@ -176,7 +170,6 @@ h3 {
         background-repeat: no-repeat;
         transition: background-size 0.3s, background-position 0s 0.3s;
         padding-left: 0;
-        padding-bottom: 1em;
     }
 
         #menuli:hover {
