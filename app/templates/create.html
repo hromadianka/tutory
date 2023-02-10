@@ -8,13 +8,6 @@
     <link href="{% static "style.css" %}" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <header>
-        <a href="/" style="margin-bottom: 0"><img id="logo" src="{% static "img/logo.png" %}" /></a>
-        <ul id="menuul">
-            <li id="menuli"><a href="/#about">Про нас</a></li>
-            <li id="menuli"><a href="/#student">Я - студент</a></li>
-            <li id="menuli"><a href="/#business">Я - підприємець</a></li>
-        </ul>
-    </header><h1>Створити проєкт</h1><form action="" method="POST"><input required name="name" type="text" placeholder="Назва проєкту" style="margin-bottom: 0.7em" />{% csrf_token %}<br /><textarea name="description" type="text" placeholder="Опиши проєкт" style="margin-bottom: 0.7em"></textarea><br /><input name="category" type="text" placeholder="Впиши категорію" /><button>Створити проєкт✨</button></form><p style="color: #808080; margin-top: 2em">Категорії - це навички, потрібні виконавцю (дизайн, фронт-енд розробка тощо)</p>
+    <header><a href="/" style="margin-bottom: 0"><img id="logo" src="{% static "img/logo.png" %}" /></a><ul id="menuul"><li id="menuli"><a href="/#about">Про нас</a></li><li id="menuli"><a href="/#student">Я - студент</a></li><li id="menuli"><a href="/#business">Я - підприємець</a></li></ul></header><h1>Створити проєкт</h1><form action="" method="POST"><input required name="name" type="text" placeholder="Назва проєкту" style="margin-bottom: 0.7em" />{% csrf_token %}<br /><textarea name="description" type="text" placeholder="Опиши проєкт" style="margin-bottom: 0.7em"></textarea><br /><input name="category" type="text" placeholder="Впиши категорію" /><button>Створити проєкт✨</button></form><p style="color: #808080; margin-top: 2em">Категорії - це навички, потрібні виконавцю (дизайн, фронт-енд розробка тощо)</p>
 </body>
 </html>
