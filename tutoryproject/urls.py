@@ -39,6 +39,9 @@ urlpatterns = [
     path('project/<str:pk>/delete', views.delete),
     path('search', views.search),
     path('courses', views.courses),
+    path('courses/webdev', views.webdev),
+    path('courses/design', views.design),
+    path('courses/project-management', views.projectmanagement),
     path('allprojects', views.allprojects),
 ]
 
