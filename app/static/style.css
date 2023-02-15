@@ -136,6 +136,12 @@ h3 {
     #signup {
         width: 80%;
     }
+    
+    #profilephoto {
+        max-height: 5em; 
+        margin-left: 9.85em; 
+        border-radius: 5px;
+    }
 
 }
 
@@ -211,6 +217,12 @@ h3 {
         float: left;
         align-content: end;
         margin-bottom: 2em;
+    }
+    
+    #profilephoto {
+        max-height: 5em; 
+        margin-left: 0; 
+        border-radius: 5px;
     }
 
 }
