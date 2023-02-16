@@ -100,6 +100,10 @@ h3 {
         margin-left: 10em;
     }
 
+    #image {
+        max-height: 20em;
+    }
+
     .theory, .card, #link, .profile, ul {
         margin-left: 9.85em;
     }
