@@ -8,5 +8,5 @@
     <link href="{% static "style.css" %}" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <header><a href="/" style="margin-bottom: 0"><img id="logo" src="{% static "img/logo.png" %}" /></a><ul id="menuul"><li id="menuli"><a href="/#about">Про нас</a></li><li id="menuli"><a href="/#student">Я - студент</a></li><li id="menuli"><a href="/#business">Я - підприємець</a></li></ul></header><h1>Всі проєкти</h1>{% for project in Projects reversed %}<div class="card project"><p id="cardname"><a href="/project/{{project.id}}">{{project.name}}</a></p><div id="company"><p id="cardcompany">{{project.user}}</p></div><p id="carddescription">{{project.description|wordwrap:20|truncatechars:23}}</p></div>{% endfor %}
+    <header><a href="/" style="margin-bottom: 0"><img id="logo" src="{% static "img/logo.png" %}" /></a><ul id="menuul"><li id="menuli"><a href="/#about">Про нас</a></li><li id="menuli"><a href="/#student">Я - студент</a></li><li id="menuli"><a href="/#business">Я - підприємець</a></li></ul></header><h1>Всі проєкти</h1>{% for project in Projects reversed %}<div class="card project" style="height: max-content"><p id="cardname"><a href="/project/{{project.id}}">{{project.name}}</a></p><div id="company"><p id="cardcompany">{{project.user}}</p></div><p id="carddescription">{{project.description|truncatechars:80}}</p></div>{% endfor %}
   </body></html>
