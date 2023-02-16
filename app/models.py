@@ -54,3 +54,7 @@ class Feedback(models.Model):
 
     def __str__(self):
         return str(self.text)
+    
+class CourseProject(models.Model):
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+    chapter = models.CharField(max_length=100)
