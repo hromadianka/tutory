@@ -42,6 +42,10 @@ h3 {
     body {
         max-width: 80%;
     }
+	
+    #image {
+	 max-width: 40%;
+    }
     
     header {
         display: flex;
@@ -150,6 +154,10 @@ h3 {
     body {
         max-width: 95%;
         margin-left: 1em;
+    }
+	
+    #image {
+	 max-width: 100%;
     }
 
     .callout {
