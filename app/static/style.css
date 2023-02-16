@@ -439,3 +439,7 @@ figure {
 	margin: 1.25em 0;
 	page-break-inside: avoid;
 }
+
+details {
+	margin-bottom: 1em;
+}
