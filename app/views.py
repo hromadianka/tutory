@@ -299,20 +299,20 @@ def design(request):
       design7_real = CourseProject.objects.filter(chapter='design7_real')
       
       context = {
-            'design1_training' = design1_training,
-            'design1_real' = design1_real,
-            'design2_training' = design2_training,
-            'design2_real' = design2_real,
-            'design3_training' = design3_training,
-            'design3_real' = design3_real,
-            'design4_training' = design4_training,
-            'design4_real' = design4_real,
-            'design5_training' = design5_training,
-            'design5_real' = design5_real,
-            'design6_training' = design6_training,
-            'design6_real' = design6_real,
-            'design7_training' = design7_training,
-            'design7_real' = design7_real,
+            'design1_training': design1_training,
+            'design1_real': design1_real,
+            'design2_training': design2_training,
+            'design2_real': design2_real,
+            'design3_training': design3_training,
+            'design3_real': design3_real,
+            'design4_training': design4_training,
+            'design4_real': design4_real,
+            'design5_training': design5_training,
+            'design5_real': design5_real,
+            'design6_training': design6_training,
+            'design6_real': design6_real,
+            'design7_training': design7_training,
+            'design7_real': design7_real,
       }
       
       return render(request, 'design.html', context)
