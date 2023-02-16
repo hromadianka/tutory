@@ -58,3 +58,6 @@ class Feedback(models.Model):
 class CourseProject(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
     chapter = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return str(self.chapter)
