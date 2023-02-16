@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .models import Profile, Project, AddProject, Result, Feedback
+from .models import Profile, Project, AddProject, Result, Feedback, CourseProject
 from itertools import chain
 import uuid
 
@@ -283,7 +283,39 @@ def webdev(request):
       return render(request, 'webdev.html')
 
 def design(request):
-      return render(request, 'design.html')
+      design1_training = CourseProject.objects.filter(chapter='design1_training')
+      design1_real = CourseProject.objects.filter(chapter='design1_real')
+      design2_training = CourseProject.objects.filter(chapter='design2_training')
+      design2_real = CourseProject.objects.filter(chapter='design2_real')
+      design3_training = CourseProject.objects.filter(chapter='design3_training')
+      design3_real = CourseProject.objects.filter(chapter='design3_real')
+      design4_training = CourseProject.objects.filter(chapter='design4_training')
+      design4_real = CourseProject.objects.filter(chapter='design4_real')
+      design5_training = CourseProject.objects.filter(chapter='design5_training')
+      design5_real = CourseProject.objects.filter(chapter='design5_real')
+      design6_training = CourseProject.objects.filter(chapter='design6_training')
+      design6_real = CourseProject.objects.filter(chapter='design6_real')
+      design7_training = CourseProject.objects.filter(chapter='design7_training')
+      design7_real = CourseProject.objects.filter(chapter='design7_real')
+      
+      context = {
+            'design1_training' = design1_training,
+            'design1_real' = design1_real,
+            'design2_training' = design2_training,
+            'design2_real' = design2_real,
+            'design3_training' = design3_training,
+            'design3_real' = design3_real,
+            'design4_training' = design4_training,
+            'design4_real' = design4_real,
+            'design5_training' = design5_training,
+            'design5_real' = design5_real,
+            'design6_training' = design6_training,
+            'design6_real' = design6_real,
+            'design7_training' = design7_training,
+            'design7_real' = design7_real,
+      }
+      
+      return render(request, 'design.html', context)
 
 def projectmanagement(request):
       return render(request, 'projectmanagement.html')
