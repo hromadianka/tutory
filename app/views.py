@@ -280,6 +280,8 @@ def courses(request):
       return render(request, 'courses.html')
 
 def webdev(request):
+    variable = '{% static %}'
+    variable1 = '{% extends base.html %}'
       return render(request, 'webdev.html')
 
 def design(request):
