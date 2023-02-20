@@ -493,6 +493,7 @@ code {
 	width: 100%;
 	align-items: stretch;
     border: #808080;
+    border-width: 0.1em;
 }
 
 .bookmark-title {
