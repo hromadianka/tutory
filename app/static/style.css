@@ -157,6 +157,10 @@ h3 {
         margin-left: 0;
     }
 
+    .code {
+        margin-left: 10em;
+    }
+
 }
 
 @media (max-width: 650px) {
