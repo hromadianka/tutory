@@ -280,7 +280,25 @@ def courses(request):
       return render(request, 'courses.html')
 
 def webdev(request):
-    context = {}
+    webdev1_training = CourseProject.objects.filter(chapter='webdev1_training')
+    webdev1_real = CourseProject.objects.filter(chapter='webdev1_real')
+    webdev2_training = CourseProject.objects.filter(chapter='webdev2_training')
+    webdev2_real = CourseProject.objects.filter(chapter='webdev2_real')
+    webdev3_training = CourseProject.objects.filter(chapter='webdev3_training')
+    webdev3_real = CourseProject.objects.filter(chapter='webdev3_real')
+    webdev4_training = CourseProject.objects.filter(chapter='webdev4_training')
+    webdev4_real = CourseProject.objects.filter(chapter='webdev4_real')
+    
+    context = {
+        'webdev1_training': webdev1_training,
+        'webdev1_real': webdev1_real,
+        'webdev2_training': webdev2_training,
+        'webdev2_real': webdev2_real,
+        'webdev3_training': webdev3_training,
+        'webdev3_real': webdev3_real,
+        'webdev4_training': webdev4_training,
+        'webdev4_real': webdev4_real,
+    }
     return render(request, 'webdev.html', context)
 
 def design(request):
