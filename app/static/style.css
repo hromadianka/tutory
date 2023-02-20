@@ -98,7 +98,7 @@ h3 {
         margin-left: 7.9em;
     }
 
-    p, li {
+    p, li, code, .bookmark {
         margin-left: 10em;
     }
 
