@@ -492,6 +492,7 @@ code {
 	display: flex;
 	width: 100%;
 	align-items: stretch;
+    border: #808080;
 }
 
 .bookmark-title {
