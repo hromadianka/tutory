@@ -282,7 +282,8 @@ def courses(request):
 def webdev(request):
     variable = '{% static %}'
     variable1 = '{% extends base.html %}'
-      return render(request, 'webdev.html')
+    context = {'variable': variable, 'variable1': variable1}
+      return render(request, 'webdev.html', context)
 
 def design(request):
       design1_training = CourseProject.objects.filter(chapter='design1_training')
