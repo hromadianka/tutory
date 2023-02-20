@@ -251,6 +251,10 @@ h3 {
         margin-left: 1em;
     }
 
+    .code {
+        white-space: pre-wrap;
+    }
+
 }
 
 #menuul, #menuli {
