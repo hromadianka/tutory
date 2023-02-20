@@ -455,6 +455,15 @@ details {
 	list-style-type: none;
 }
 
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 0;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
 .code,
 code {
 	background: rgba(135, 131, 120, 0.15);
@@ -492,8 +501,6 @@ code {
 	display: flex;
 	width: 100%;
 	align-items: stretch;
-    border: #808080;
-    border-width: 0.1em;
 }
 
 .bookmark-title {
