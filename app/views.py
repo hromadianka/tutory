@@ -1,4 +1,4 @@
-﻿from django.http.response import HttpResponse
+from django.http.response import HttpResponse
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User, auth
 from django.contrib import messages
@@ -261,7 +261,8 @@ def search(request):
         projects1 = Project.objects.filter(name__icontains=search)
         projects2 = Project.objects.filter(description__icontains=search)
         projects3 = Project.objects.filter(category__icontains=search)
-        projects = (projects1 | projects2 | projects3).distinct()
+        projects4 = Project.objects.filter(user__icontains=search)
+        projects = (projects1 | projects2 | projects3 | projects4).distinct()
 
     context = {'projects': projects}
     return render(request, 'search.html', context)
