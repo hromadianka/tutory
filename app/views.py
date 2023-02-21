@@ -196,7 +196,7 @@ def project(request, pk):
 
         result1 = Result.objects.get(id=result_id)
 
-        new_feedback = Feedback.objects.create(text=text, result=result1, business_username=username, student_username=student)
+        new_feedback = Feedback.objects.create(text=text, result=result1, business_username=request.user.username, student_username=student)
         project.save()
 
         return redirect('project', pk=project.id)
