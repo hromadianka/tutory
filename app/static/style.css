@@ -165,12 +165,16 @@ h3 {
         width: fit-content;
     }
 
-    input {
+    input, textarea {
         width: 60%;
     }
 
     button {
         width: 62%;
+    }
+
+    .add {
+        width: 40%;
     }
 
 }
