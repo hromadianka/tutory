@@ -6,3 +6,6 @@ tzdata==2022.7
 dj-database-url==1.2.0
 whitenoise==6.3.0
 psycopg2==2.9.5
+cloudinary
+django-cloudinary-storage
+mysqlclient
