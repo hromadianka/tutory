@@ -9,3 +9,4 @@ psycopg2==2.9.5
 cloudinary
 django-cloudinary-storage
 mysqlclient
+django-heroku
